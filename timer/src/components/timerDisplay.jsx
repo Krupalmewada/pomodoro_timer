@@ -12,6 +12,7 @@ export default function TimerDisplay({ timeLeft, isBreak, sessions }) {
           fontSize: "11px",
           letterSpacing: "3px",
           fontFamily: "monospace",
+          textAlign: "center",
         }}
       >
         {isBreak ? "BREAK" : `SESSION ${sessions + 1}`}

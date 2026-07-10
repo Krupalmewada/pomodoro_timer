@@ -7,15 +7,22 @@ export default function FloatingTimer() {
   const { timeLeft, isRunning, isBreak, sessions, start, pause, reset } =
     useTimer();
   const { position, handleMouseDown } = useDrag();
+
   return (
     <div
-      className="bg-gray-800 rounded-2xl p-3 w-52 shadow-2xl border border-gray-600"
       style={{
         position: "fixed",
         left: position.x,
         top: position.y,
         zIndex: 2147483647,
         cursor: "grab",
+        background: "#1f2937",
+        borderRadius: "16px",
+        padding: "12px",
+        width: "208px",
+        boxShadow: "0 25px 50px rgba(0,0,0,0.5)",
+        border: "1px solid #4b5563",
+        textAlign: "center",
       }}
       onMouseDown={handleMouseDown}
     >
